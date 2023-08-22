@@ -10,6 +10,8 @@ module.exports = {
         '396px': '396px',
         '34px': '34px',
         '13px': '13px',
+        '210px': '210px',
+        '44px': '44px',
       },
       height: {
         '76px': '76px',
@@ -32,6 +34,7 @@ module.exports = {
       animation: {
         'ring': 'swing 0.5s ease-in-out 2',
         'spin-fast': 'spin 1s 1',
+        'grow-profile': 'growprofile 0.5s 1'
       },
       keyframes: {
         swing: {
@@ -44,7 +47,21 @@ module.exports = {
           '100%': {
             transform: 'rotate(-15deg)'
           },
-        }
+        },
+        growprofile: {
+          '0%, 50%': {
+            transform: 'scale(0%)',
+            opacity: 0.2,
+          },
+          '50%, 100%': {
+            transform: 'scale(100%)',
+            opacity: 0.05,
+          },
+          '100%': {
+            transform: 'scale(100%)',
+            opacity: 0,
+          },
+        },
       },
     },
   },
