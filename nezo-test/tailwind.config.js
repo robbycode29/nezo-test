@@ -53,6 +53,7 @@ module.exports = {
         'ring': 'swing 0.5s ease-in-out 2',
         'spin-fast': 'spin 1s 1',
         'grow-profile': 'growprofile 0.3s 1',
+        'ping-custom': 'pingcustom 1s 1',
       },
       keyframes: {
         swing: {
@@ -77,6 +78,19 @@ module.exports = {
           },
           '100%': {
             transform: 'scale(100%)',
+            opacity: 0,
+          },
+        },
+        pingcustom: {
+          '0%, 50%': {
+            transform: 'scale(100%)',
+          },
+          '50%, 100%': {
+            transform: 'scale(200%)',
+            opacity: 0.05,
+          },
+          '100%': {
+            transform: 'scale(200%)',
             opacity: 0,
           },
         },
