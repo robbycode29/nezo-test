@@ -10,8 +10,10 @@
           </div>
           <div class="flex-1"></div>
           <div class="w-396px flex items-center gap-8">
-            <button class="h-6 w-6 p-1 bg-EBEBEB rounded-full flex items-center justify-center transform transition duration-500 hover:bg-007FFF">
-              <img src="@/assets/header/plus.svg" class=""/>
+            <button class="h-6 w-6 p-1 bg-EBEBEB rounded-full flex items-center justify-center transform transition duration-500 hover:bg-007FFF group">
+              <svg class="w-6 h-6 stroke-current stroke-2 text-5E6278 transition duration-500 group-hover:text-white" viewBox="0 0 14 14" fill="none">
+                <path :d="plusSvg" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </button>
             <button class="h-6 w-6 flex items-center justify-center group">
               <img src="@/assets/header/setting-2.svg" class="group-hover:animate-spin-fast"/>
@@ -39,6 +41,20 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import plusSvgPath from '@/assets/header/plus';
+
+export default defineComponent({
+  computed: {
+    plusSvg() {
+      const plus: string = plusSvgPath.toString()
+      return plus;
+    }
+  },
+})
+</script>
 
 <style>
 

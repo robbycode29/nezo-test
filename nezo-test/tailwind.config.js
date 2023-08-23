@@ -14,6 +14,7 @@ module.exports = {
         '44px': '44px',
         '190px': '190px',
         '18px': '18px',
+        '185px': '185px',
       },
       height: {
         '76px': '76px',
@@ -27,6 +28,7 @@ module.exports = {
         'EBEBEB': '#EBEBEB',
         'FA4B4B': '#FA4B4B',
         '007FFF': '#007FFF',
+        '5E6278': '#5E6278',
       },
       margin: {
         '24px': '24px',
@@ -39,6 +41,7 @@ module.exports = {
       fontSize: {
         '10px': '10px',
         '12px': '12px',
+        '16px': '16px',
       },
       animation: {
         'ring': 'swing 0.5s ease-in-out 2',
