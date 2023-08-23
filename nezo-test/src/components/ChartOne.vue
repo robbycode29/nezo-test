@@ -1,11 +1,14 @@
 <template>
-    <div class="flex flex-col justify-between w-342px h-220px p-6 shadow-custom-1 rounded-xl bg-white">
+    <div class="flex flex-col justify-between w-342px h-220px p-6 shadow-custom-1 rounded-xl bg-white group">
         <div class="flex justify-between">
             <div class="flex flex-col">
                 <span class="text-sm">{{ chart.name }}</span>
                 <span class="text-2xl">{{ chart.value }}</span>
             </div>
-            <img :src="chartIconColor"/>
+            <div class="relative">
+                <img class="relative z-10" :src="chartIconColor"/>
+                <div :class="'absolute top-2 left-2 w-10 h-10 bg-'+chart.color+'-500 rounded-full group-hover:animate-ping'"></div>
+            </div>
         </div>
         <div class="flex justify-center w-full self-end">
             <apexchart height="100" type="line" :options="options" :series="series"></apexchart>
