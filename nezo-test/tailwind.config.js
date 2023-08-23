@@ -53,7 +53,6 @@ module.exports = {
         'ring': 'swing 0.5s ease-in-out 2',
         'spin-fast': 'spin 1s 1',
         'grow-profile': 'growprofile 0.3s 1',
-        'ping-custom': 'ping 0.5s 1',
       },
       keyframes: {
         swing: {
