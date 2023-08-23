@@ -7,7 +7,7 @@
             </div>
             <div class="relative">
                 <img class="relative z-10" :src="chartIconColor"/>
-                <div :class="'absolute top-2 left-2 w-10 h-10 bg-'+chart.color+'-500 rounded-full group-hover:animate-ping-custom'"></div>
+                <div :class="'absolute top-2 left-2 w-10 h-10 bg-'+chart.color+'-500 rounded-full group-hover:animate-ping'"></div>
             </div>
         </div>
         <div class="flex justify-center w-full self-end">
