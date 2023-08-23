@@ -1,5 +1,5 @@
 <template>
-  <div class="home my-24px px-100px w-full">
+  <div class="home py-6 px-100px w-full bg-F9F9F9">
     <div class="flex justify-between">
       <div class="w-190px h-58px self-start flex flex-col justify-between gap-3">
         <div class="flex text-12px items-center gap-1">
@@ -19,12 +19,19 @@
         <span class="px-2 text-16px transition duration-500 group-hover:text-white">Download All</span>
       </button>
     </div>
+    <div class="flex pt-6 pb-9 gap-9 justify-between">
+      <div v-for="chart in getCharts" :key="chart.id">
+        <chart-one :chart="chart"/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { mapGetters } from 'vuex';
 import archiveDownloadSvgPath from '@/assets/body/archive';
+import ChartOne from '@/components/ChartOne.vue'
 
 export default defineComponent({
   name: 'HomeView',
@@ -38,13 +45,14 @@ export default defineComponent({
     };
   },
   components: {
-
+    ChartOne,
   },
   computed: {
+    ...mapGetters('charts', ['getCharts']),
     archiveSvg() {
       const svg: string = archiveDownloadSvgPath.toString();
       return svg;
-    }
+    },
   },
   methods: {
     notLastBreadcrumb(bc: { route: string; name: string; }) {

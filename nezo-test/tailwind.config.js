@@ -15,6 +15,7 @@ module.exports = {
         '190px': '190px',
         '18px': '18px',
         '185px': '185px',
+        '342px': '342px',
       },
       height: {
         '76px': '76px',
@@ -22,6 +23,7 @@ module.exports = {
         '11px': '11px',
         '58px': '58px',
         '18px': '18px',
+        '220px': '220px',
       },
       colors: {
         '222222': '#222222',
@@ -29,6 +31,10 @@ module.exports = {
         'FA4B4B': '#FA4B4B',
         '007FFF': '#007FFF',
         '5E6278': '#5E6278',
+        'F9F9F9': '#F9F9F9',
+      },
+      boxShadow: {
+        'custom-1': '0px 0px 8px 0px rgba(133, 133, 133, 0.25)'
       },
       margin: {
         '24px': '24px',
