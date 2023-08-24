@@ -6,8 +6,8 @@
                 <span class="text-2xl">{{ chart.value }}</span>
             </div>
             <div class="relative">
-                <img class="relative z-10" :src="chartIconColor"/>
-                <div :class="'absolute top-2 left-2 w-10 h-10 bg-'+chart.color+'-500 rounded-full group-hover:animate-ping-custom'"></div>
+                <img class="relative z-0" :src="chartIconColor"/>
+                <div :class="'absolute top-2 left-2 w-10 h-10 bg-'+chart.color+'-500 rounded-full group-hover:animate-ping-custom'">Stop</div>
             </div>
         </div>
         <div class="flex justify-center w-full self-end">
