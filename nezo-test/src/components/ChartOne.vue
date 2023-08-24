@@ -7,7 +7,7 @@
             </div>
             <div class="relative">
                 <img class="relative z-10" :src="chartIconColor"/>
-                <div :class="'absolute top-2 left-2 w-10 h-10 bg-'+chart.color+'-500 rounded-full opacity-100 group-hover:animate-ping-custom'"></div>
+                <div :class="classAnimationDiv"></div>
             </div>
         </div>
         <div class="flex justify-center w-full self-end">
@@ -26,6 +26,9 @@ export default defineComponent ({
             const color = this.chart.color.toString();
             const image = require.context('@/assets/charts/',false,/\.svg$/);
             return image('./doc-' + color + '.svg');
+        },
+        classAnimationDiv() {
+            return `absolute top-2 left-2 w-10 h-10 bg-${this.chart.color}-500 rounded-full opacity-100 group-hover:animate-ping-custom`;
         },
     },
     data() {
