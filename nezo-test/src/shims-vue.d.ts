@@ -14,3 +14,9 @@ declare module '@/assets/header/plus' {
   const content: String;
   export default content;
 }
+
+declare module '@/assets/orders-menu/plus-simple' {
+  const content: String;
+  export default content;
+}
+
