@@ -10,7 +10,7 @@
             <span v-if="notLastBreadcrumb(bc)" class="ml-1">/</span>
           </div>
         </div>
-        <h2>Orders</h2>
+        <h2 class="font-semibold text-xl">Orders</h2>
       </div>
       <button class="w-185px h-44px pl-6 pr-4 bg-EBEBEB rounded-lg flex items-center transition duration-500 hover:bg-007FFF group">
         <svg class="w-6 h-6 fill-current text-5E6278 transition duration-500 group-hover:text-white">
@@ -24,6 +24,9 @@
         <chart-one :chart="chart"/>
       </div>
     </div>
+    <div>
+      <orders-menu/>
+    </div>
   </div>
 </template>
 
@@ -31,7 +34,8 @@
 import { defineComponent } from 'vue';
 import { mapGetters } from 'vuex';
 import archiveDownloadSvgPath from '@/assets/body/archive';
-import ChartOne from '@/components/ChartOne.vue'
+import ChartOne from '@/components/ChartOne.vue';
+import OrdersMenu from '@/components/OrdersMenu.vue';
 
 export default defineComponent({
   name: 'HomeView',
@@ -46,6 +50,7 @@ export default defineComponent({
   },
   components: {
     ChartOne,
+    OrdersMenu,
   },
   computed: {
     ...mapGetters('charts', ['getCharts']),

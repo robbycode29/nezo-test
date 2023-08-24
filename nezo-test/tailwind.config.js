@@ -16,6 +16,7 @@ module.exports = {
         '18px': '18px',
         '185px': '185px',
         '342px': '342px',
+        '165px': '165px',
       },
       height: {
         '76px': '76px',
@@ -24,6 +25,7 @@ module.exports = {
         '58px': '58px',
         '18px': '18px',
         '220px': '220px',
+        '92px': '92px',
       },
       colors: {
         '222222': '#222222',
