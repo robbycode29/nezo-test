@@ -20,3 +20,12 @@ declare module '@/assets/orders-menu/plus-simple' {
   export default content;
 }
 
+declare module '@/assets/tab-zero/filter' {
+  const content: String;
+  export default content;
+}
+
+declare module '@/store/mockOrders' {
+  const content: Array;
+  export default content;
+}

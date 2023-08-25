@@ -27,6 +27,11 @@
     <div>
       <orders-menu/>
     </div>
+    <div class="py-6">
+      <transition name="slide-fade" mode="out-in">
+        <component :is="currentTab" :key="currentTab.name"/>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -36,6 +41,13 @@ import { mapGetters } from 'vuex';
 import archiveDownloadSvgPath from '@/assets/body/archive';
 import ChartOne from '@/components/ChartOne.vue';
 import OrdersMenu from '@/components/OrdersMenu.vue';
+import TabZero from '@/components/TabZero.vue';
+import TabOne from '@/components/TabOne.vue';
+import TabTwo from '@/components/TabTwo.vue';
+import TabThree from '@/components/TabThree.vue';
+import TabFour from '@/components/TabFour.vue';
+import TabFive from '@/components/TabFive.vue';
+import TabSix from '@/components/TabSix.vue';
 
 export default defineComponent({
   name: 'HomeView',
@@ -51,12 +63,34 @@ export default defineComponent({
   components: {
     ChartOne,
     OrdersMenu,
+    TabZero,
   },
   computed: {
     ...mapGetters('charts', ['getCharts']),
+    ...mapGetters(['getCurrentTab']),
     archiveSvg() {
       const svg: string = archiveDownloadSvgPath.toString();
       return svg;
+    },
+    currentTab() {
+      switch(this.getCurrentTab) {
+        case 0:
+          return TabZero;
+        case 1:
+          return TabOne;
+        case 2:
+          return TabTwo;
+        case 3:
+          return TabThree;
+        case 4:
+          return TabFour;
+        case 5:
+          return TabFive;
+        case 6:
+          return TabSix;
+        default:
+          return TabZero;
+      }
     },
   },
   methods: {
@@ -69,3 +103,30 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+/* For the component that's entering */
+.slide-fade-enter-active {
+  transition: transform 0.2s ease-out, opacity 1s ease-out;
+}
+.slide-fade-enter-from {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.slide-fade-enter-to {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* For the component that's leaving */
+.slide-fade-leave-active {
+  transition: transform 0.3s ease-in, opacity 0.2s ease-in;
+}
+.slide-fade-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
+.slide-fade-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+</style>

@@ -26,6 +26,7 @@ module.exports = {
         '18px': '18px',
         '220px': '220px',
         '92px': '92px',
+        '1100px': '1100px',
       },
       colors: {
         '222222': '#222222',
@@ -34,6 +35,7 @@ module.exports = {
         '007FFF': '#007FFF',
         '5E6278': '#5E6278',
         'F9F9F9': '#F9F9F9',
+        'F2F2F2': '#F2F2F2',
       },
       boxShadow: {
         'custom-1': '0px 0px 8px 0px rgba(133, 133, 133, 0.25)'
