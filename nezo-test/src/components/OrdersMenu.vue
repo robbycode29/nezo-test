@@ -6,77 +6,77 @@
                     <button @click="setCurrentTab(0)" class="flex flex-col justify-between">
                         <div v-if="getCurrentTab === 0" class="flex">
                             <span class="text-007FFF">All Orders</span>
-                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">287</div>
+                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">{{ getOrders.length }}</div>
                         </div>
                         <div v-else class="flex">
                             <span class="">All Orders</span>
-                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">287</div>
+                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">{{ getOrders.length }}</div>
                         </div>
                         <div></div>
                     </button>
                     <button @click="setCurrentTab(1)" class="flex flex-col justify-between">
                         <div v-if="getCurrentTab === 1" class="flex">
                             <span class="text-007FFF">Active</span>
-                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">287</div>
+                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
                             <span class="">Active</span>
-                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">287</div>
+                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>
                     </button>
                     <button @click="setCurrentTab(2)" class="flex flex-col justify-between">
                         <div v-if="getCurrentTab === 2" class="flex">
                             <span class="text-007FFF">Processing</span>
-                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">287</div>
+                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
                             <span class="">Processing</span>
-                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">287</div>
+                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>
                     </button>
                     <button @click="setCurrentTab(3)" class="flex flex-col justify-between">
                         <div v-if="getCurrentTab === 3" class="flex">
                             <span class="text-007FFF">Unfulfilled</span>
-                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">287</div>
+                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
                             <span class="">Unfulfilled</span>
-                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">287</div>
+                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>
                     </button>
                     <button @click="setCurrentTab(4)" class="flex flex-col justify-between">
                         <div v-if="getCurrentTab === 4" class="flex">
                             <span class="text-007FFF">Fulfilled</span>
-                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">287</div>
+                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
                             <span class="">Fulfilled</span>
-                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">287</div>
+                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>
                     </button>
                     <button @click="setCurrentTab(5)" class="flex flex-col justify-between">
                         <div v-if="getCurrentTab === 5" class="flex">
                             <span class="text-007FFF">Completed</span>
-                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">287</div>
+                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
                             <span class="">Completed</span>
-                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">287</div>
+                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>
                     </button>
                     <button @click="setCurrentTab(6)" class="flex flex-col justify-between">
                         <div v-if="getCurrentTab === 6" class="flex">
                             <span class="text-007FFF">Canceled</span>
-                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">287</div>
+                            <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
                             <span class="">Canceled</span>
-                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">287</div>
+                            <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>
                     </button>
@@ -109,6 +109,7 @@ export default defineComponent({
     },
     computed: {
         ...mapGetters(['getCurrentTab']),
+        ...mapGetters('orders', ['getOrders']),
         plusSimpleSvg() {
             const svg = plusSimple.toString();
             return svg;

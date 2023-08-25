@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import charts from '@/store/charts'
+import orders from '@/store/orders'
 
 export default createStore({
   state: {
@@ -22,5 +23,6 @@ export default createStore({
   },
   modules: {
     charts,
+    orders,
   }
 })

@@ -1,7 +1,7 @@
 <template>
-  <div class="flex w-screen h-screen">
+  <div class="flex w-screen h-screen bg-F9F9F9">
     <!-- <div class="w-280px h-3/4 bg-222222"></div> -->
-    <div class="flex flex-col items-center w-screen h-screen">
+    <div class="flex flex-col items-center w-screen">
       <div class="w-full h-76px shadow-custom-1 z-10 flex items-center bg-white">
         <div class="mx-24px my-16px w-full flex justify-between">
           <div class="flex w-400px border rounded-lg h-44px items-center">
