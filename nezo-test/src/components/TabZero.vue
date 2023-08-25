@@ -2,7 +2,7 @@
     <div>
         <div class="p-6 h-1100px bg-white shadow-custom-1 rounded-xl flex flex-col gap-6">
             <div class="flex justify-between">
-                <span class="font-semibold text-xl">Orders list</span>
+                <span class="font-semibold text-xl text-222222">Orders list</span>
                 <div class="flex justify-between gap-4">
                     <button class="bg-F2F2F2 p-2 rounded-lg group hover:bg-yellow-300 transition duration-300">
                         <svg class="w-6 h-6 stroke-current text-5E6278 group-hover:text-gray-700 transition duration-300" viewBox="0 0 24 24">
@@ -33,6 +33,9 @@
                     </div>
                 </div>
             </div>
+            <pagination-control/>
+            <orders-table/>
+            <pagination-control/>
         </div>
     </div>
 </template>
@@ -40,9 +43,15 @@
 import { defineComponent } from 'vue';
 import { mapGetters, mapActions } from 'vuex';
 import filter from '@/assets/tab-zero/filter';
+import PaginationControl from './PaginationControl.vue';
+import OrdersTable from './OrdersTable.vue';
 
 export default defineComponent({
     name: 'TabZero',
+    components: {
+        PaginationControl,
+        OrdersTable,
+    },
     computed: {
         ...mapGetters('orders', ['getFilters']),
         filterSvg() {
@@ -52,10 +61,14 @@ export default defineComponent({
     },
     methods: {
         ...mapActions('orders', ['clearFilters', 'setFilters']),
+        ...mapActions('orders', ['recalculatePages']),
         deleteFilter(selectedFilter: object) {
             const newFilters = this.getFilters.filter((filter: object) => filter !== selectedFilter );
             this.setFilters(newFilters);
         },
+    },
+    mounted() {
+        this.recalculatePages();
     },
 });
 </script>

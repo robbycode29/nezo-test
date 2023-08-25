@@ -9,7 +9,7 @@
                             <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">{{ getOrders.length }}</div>
                         </div>
                         <div v-else class="flex">
-                            <span class="">All Orders</span>
+                            <span class="text-222222">All Orders</span>
                             <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">{{ getOrders.length }}</div>
                         </div>
                         <div></div>
@@ -20,7 +20,7 @@
                             <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
-                            <span class="">Active</span>
+                            <span class="text-222222">Active</span>
                             <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>
@@ -31,7 +31,7 @@
                             <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
-                            <span class="">Processing</span>
+                            <span class="text-222222">Processing</span>
                             <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>
@@ -42,7 +42,7 @@
                             <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
-                            <span class="">Unfulfilled</span>
+                            <span class="text-222222">Unfulfilled</span>
                             <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>
@@ -53,7 +53,7 @@
                             <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
-                            <span class="">Fulfilled</span>
+                            <span class="text-222222">Fulfilled</span>
                             <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>
@@ -64,7 +64,7 @@
                             <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
-                            <span class="">Completed</span>
+                            <span class="text-222222">Completed</span>
                             <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>
@@ -75,7 +75,7 @@
                             <div class="bg-007FFF rounded-3xl px-2 text-white ml-3">0</div>
                         </div>
                         <div v-else class="flex">
-                            <span class="">Canceled</span>
+                            <span class="text-222222">Canceled</span>
                             <div class="bg-EBEBEB rounded-3xl px-2 text-5E6278 ml-3">0</div>
                         </div>
                         <div></div>

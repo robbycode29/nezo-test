@@ -2,8 +2,8 @@
     <div class="flex flex-col justify-between w-342px h-220px p-6 shadow-custom-1 rounded-xl bg-white group">
         <div class="flex justify-between">
             <div class="flex flex-col">
-                <span class="text-sm">{{ chart.name }}</span>
-                <span class="text-2xl">{{ chart.value }}</span>
+                <span class="text-sm text-222222">{{ chart.name }}</span>
+                <span class="text-2xl text-222222">{{ chart.value }}</span>
             </div>
             <div class="relative">
                 <img class="relative z-10" :src="chartIconColor"/>
