@@ -15,6 +15,7 @@ export default {
         filters: mockFilters,
         nrOfEntriesDisplayed: 10,
         pages: [] as object[][],
+        currentPage: 1,
     },
     getters: {
         getOrders(state: { orders: [] }) {
@@ -29,6 +30,9 @@ export default {
         getPages(state: { pages: [] }) {
             return state.pages;
         },
+        getCurrentPage(state: { currentPage: number }) {
+            return state.currentPage;
+        },
     },
     mutations: {
         setNewFilters(state: { filters: [] }, newFilters: []) {
@@ -37,13 +41,16 @@ export default {
         changeNrOfEntries(state: { nrOfEntriesDisplayed: number }, newNumber: number) {
             state.nrOfEntriesDisplayed = newNumber;
         },
-        setPages(state: { pages: object[][], nrOfEntriesDisplayed: number, orders: [] }) {
+        setPages(state: { pages: object[][], nrOfEntriesDisplayed: number, orders: [], currentPage: object[] }) {
             const newPages: object[][] = [];
             const nrOfPages = Math.ceil(state.orders.length / state.nrOfEntriesDisplayed);
             for(let i = 0; i < state.orders.length; i+=state.nrOfEntriesDisplayed) {
                 newPages.push(state.orders.slice(i, i+state.nrOfEntriesDisplayed));
             }
             state.pages = newPages;
+        },
+        setPage(state: { currentPage: number }, newPage: number) {
+            state.currentPage = newPage
         },
     },
     actions: {
@@ -58,6 +65,9 @@ export default {
         },
         recalculatePages({ commit }: ActionContext<StaticRange, any>) {
             commit('setPages');
+        },
+        setCurrentPage({ commit }: ActionContext<StaticRange, any>, newPage: number) {
+            commit('setPage', newPage);
         },
     },
 };
