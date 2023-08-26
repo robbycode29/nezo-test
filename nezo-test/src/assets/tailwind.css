@@ -1,3 +1,48 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/* This is the scrollbar track (the background) */
+html, body {
+    overflow-y: scroll; /* Always show vertical scrollbar to prevent jumping */
+    overflow-x: hidden;
+}
+
+/* This is the scrollbar track (the background) */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* This is the handle (or the 'thumb') */
+::-webkit-scrollbar-thumb {
+    background: #b0b0b0;
+    border-radius: 8px;
+}
+
+/* On hover, brighten the thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: darken(rgba(128, 128, 128, 0.5), 10%);
+}
+
+/* This is the scrollbar button and the empty space (or the 'track') */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* This makes the scrollbar slim */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #EBEBEB transparent;
+}
+
+/* These are for Internet Explorer */
+body {
+    scrollbar-face-color: #EBEBEB;
+    scrollbar-track-color: transparent;
+    scrollbar-width: thin;
+    scrollbar-arrow-color: #EBEBEB;
+    scrollbar-highlight-color: #EBEBEB;
+    scrollbar-3dlight-color: transparent;
+    scrollbar-darkshadow-color: transparent;
+    scrollbar-shadow-color: transparent;
+}

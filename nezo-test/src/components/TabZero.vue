@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="p-6 h-1100px bg-white shadow-custom-1 rounded-xl flex flex-col gap-6">
+        <div class="p-6 bg-white shadow-custom-1 rounded-xl flex flex-col gap-6">
             <div class="flex justify-between">
                 <span class="font-semibold text-xl text-222222">Orders list</span>
                 <div class="flex justify-between gap-4">
