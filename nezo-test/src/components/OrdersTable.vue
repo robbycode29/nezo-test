@@ -89,13 +89,13 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import CustomSelect from '@/components/CustomSelect.vue';
+import customSelect from '@/components/customSelect.vue';
 import CustomFilter from '@/components/CustomFilter.vue';
 
 export default defineComponent({
     name: 'OrdersTable',
     components: {
-        CustomSelect,
+        customSelect,
         CustomFilter,
     },
     data() {
