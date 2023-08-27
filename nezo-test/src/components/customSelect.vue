@@ -6,9 +6,9 @@
                 <span v-else class="font-normal text-BDBDBD">Select</span>
                 <img class="absolute top-1/2 right-3 transform -translate-y-1/2" src="@/assets/tab-zero/arrow-down.svg"/>
             </div>
-            <div v-if="isOpen" class="absolute w-full mt-2 bg-white border border-D4D4D4 rounded-lg max-h-60 overflow-y-auto">
-                <div v-for="option in options" :key="option" @click="selectOption(option)" class="flex px-3 py-2 hover:bg-gray-200 cursor-pointer">
-                    <span class="text-222222 font-medium text-sm">{{ option }}</span>
+            <div v-if="isOpen" class="absolute w-full mt-2 bg-white border border-D4D4D4 rounded-lg max-h-60 overflow-y-auto shadow-custom-2 pl-3 pr-2 py-3">
+                <div v-for="option in options" :key="option" @click="selectOption(option)" class="flex px-3 py-2 cursor-pointer hover:bg-F2F2F2 rounded-lg group">
+                    <span class="text-222222 font-medium text-sm group-hover:text-007FFF">{{ option }}</span>
                 </div>
             </div>
         </div>

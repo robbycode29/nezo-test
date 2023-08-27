@@ -41,7 +41,7 @@
                             </button>
                         </div>
                     </th>
-                    <th class="p-4 bg-F2F2F2 flex gap-4 flex-col rounded-l-lg">
+                    <th class="p-4 bg-F2F2F2 flex gap-4 flex-col">
                         <div class="flex gap-1">
                             <span class="text-sm text-222222">Customer</span>
                             <button @click="changeColOrder(3)">
@@ -49,7 +49,7 @@
                                 <img v-else src="@/assets/tab-zero/sort-arrow-up.svg"/>
                             </button>
                         </div>
-                        <div class="flex gap-3 border border-D4D4D4 rounded-lg h-36px items-center bg-white">
+                        <div class="flex gap-3 border border-D4D4D4 h-36px items-center bg-white">
                             <input class="outline-none ml-3 w-200px" type="text" placeholder="Search name, email, country"/>
                             <img src="@/assets/header/magnifier-glass.svg" class="w-5 h-5 mr-3"/>
                         </div>
@@ -64,7 +64,7 @@
                         </div>
                         <custom-select :options="orderSatuses" class="relative w-196px h-36px"/>
                     </th>
-                    <th class="p-4 bg-F2F2F2 flex gap-4 flex-col rounded-l-lg">
+                    <th class="p-4 bg-F2F2F2 flex gap-4 flex-col">
                         <div class="flex gap-1">
                             <span class="text-sm text-222222">Total</span>
                             <button @click="changeColOrder(5)">
@@ -72,12 +72,7 @@
                                 <img v-else src="@/assets/tab-zero/sort-arrow-up.svg"/>
                             </button>
                         </div>
-                        <div class="flex justify-between gap-3 w-120px border border-D4D4D4 rounded-lg h-36px items-center bg-white">
-                            <span class="ml-3 text-sm font-normal text-5E6278">Filter</span>
-                            <button>
-                                <img src="@/assets/tab-zero/filter.svg" class="w-5 h-5 mr-3"/>
-                            </button>
-                        </div>
+                        <custom-filter/>
                     </th>
                     <th class="pl-2 pr-4 pb-12 bg-F2F2F2 rounded-r-lg">
                         <div class="flex">
@@ -94,12 +89,14 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import customSelect from './customSelect.vue';
+import CustomSelect from '@/components/CustomSelect.vue';
+import CustomFilter from '@/components/CustomFilter.vue';
 
 export default defineComponent({
     name: 'OrdersTable',
     components: {
-        customSelect,
+        CustomSelect,
+        CustomFilter,
     },
     data() {
         return {

@@ -25,6 +25,7 @@ module.exports = {
         '200px': '200px',
         '196px': '196px',
         '120px': '120px',
+        '358px': '358px',
       },
       height: {
         '76px': '76px',
@@ -49,7 +50,8 @@ module.exports = {
         'BDBDBD': '#BDBDBD',
       },
       boxShadow: {
-        'custom-1': '0px 0px 8px 0px rgba(133, 133, 133, 0.25)'
+        'custom-1': '0px 0px 8px 0px rgba(133, 133, 133, 0.25)',
+        'custom-2': '0px 0px 16px 0px rgba(133, 133, 133, 0.25)',
       },
       margin: {
         '24px': '24px',
