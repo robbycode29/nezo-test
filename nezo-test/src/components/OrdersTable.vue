@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center justify-center">
         <table class="table-auto">
-            <thead>
+            <thead class="table-header-group">
                 <tr class="flex">
                     <th class="p-4 bg-F2F2F2 flex gap-4 flex-col rounded-l-lg">
                         <div class="flex gap-1">
@@ -49,7 +49,7 @@
                                 <img v-else src="@/assets/tab-zero/sort-arrow-up.svg"/>
                             </button>
                         </div>
-                        <div class="flex gap-3 border border-D4D4D4 h-36px items-center bg-white">
+                        <div class="flex gap-3 border border-D4D4D4 h-36px items-center bg-white rounded-lg">
                             <input class="outline-none ml-3 w-200px" type="text" placeholder="Search name, email, country"/>
                             <img src="@/assets/header/magnifier-glass.svg" class="w-5 h-5 mr-3"/>
                         </div>
@@ -83,20 +83,27 @@
                     </th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody class="table-row-group">
+                <tr v-for="order in getPages[getCurrentPage-1]" :key="order.id">
+                    <order-row :order="order"></order-row>
+                </tr>
+            </tbody>
         </table>
     </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { mapGetters } from 'vuex';
 import customSelect from '@/components/customSelect.vue';
 import CustomFilter from '@/components/CustomFilter.vue';
+import OrderRow from './OrderRow.vue';
 
 export default defineComponent({
     name: 'OrdersTable',
     components: {
         customSelect,
         CustomFilter,
+        OrderRow,
     },
     data() {
         return {
@@ -104,6 +111,9 @@ export default defineComponent({
             orderSatuses: ['Completed', 'Canceled', 'On Dispute', 'Disputed', 'Partially Refunded', 'Refunded', 'Partially Shipped', 'Awaiting Payment', 'Payment Received', 'Partially Refunded', 'Processing', 'Awaiting Fulfillment'],
             orderTypes: ['Stock Order', 'Backorder', 'Mixed Order'],
         }
+    },
+    computed: {
+        ...mapGetters('orders', ['getPages', 'getCurrentPage']),
     },
     methods: {
         changeColOrder(col: number) {
