@@ -1,0 +1,19 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Country Flags/Asia/Japan">
+<g id="GB">
+<rect id="Mask" y="2.85742" width="20" height="14.2857" rx="4" fill="white"/>
+<mask id="mask0_3_8287" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="2" width="20" height="16">
+<path id="Mask_2" d="M0 4.85742C0 3.75285 0.895431 2.85742 2 2.85742H18C19.1046 2.85742 20 3.75285 20 4.85742V15.1431C20 16.2477 19.1046 17.1431 18 17.1431H2C0.895431 17.1431 0 16.2477 0 15.1431V4.85742Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_3_8287)">
+<rect id="Mask Copy" y="2.85742" width="20" height="14.2857" fill="#0A17A7"/>
+<path id="Rectangle 2" fill-rule="evenodd" clip-rule="evenodd" d="M-0.916316 1.48828L7.61929 7.24562V1.90527H12.3812V7.24493L20.9158 1.48828L21.9809 3.0674L15.2321 7.61956H20.0002V12.3815H15.2335L21.9809 16.9327L20.9158 18.5118L12.3812 12.7551V18.0957H7.61929V12.7544L-0.916316 18.5118L-1.98145 16.9327L4.76598 12.3815H0.000244141V7.61956H4.76741L-1.98145 3.0674L-0.916316 1.48828Z" fill="white"/>
+<path id="Line" d="M13.334 7.3804L22.3807 1.42883" stroke="#DB1F35" stroke-width="1.33333" stroke-linecap="round"/>
+<path id="Line Copy 2" d="M14.2954 12.6411L22.4053 18.1074" stroke="#DB1F35" stroke-width="1.33333" stroke-linecap="round"/>
+<path id="Line Copy" d="M5.71906 7.36485L-2.74023 1.66382" stroke="#DB1F35" stroke-width="1.33333" stroke-linecap="round"/>
+<path id="Line Copy 3" d="M6.63657 12.5757L-2.74023 18.7939" stroke="#DB1F35" stroke-width="1.33333" stroke-linecap="round"/>
+<path id="Rectangle 2 Copy 3" fill-rule="evenodd" clip-rule="evenodd" d="M0 11.4289H8.57143V17.1431H11.4286V11.4289H20V8.57171H11.4286V2.85742H8.57143V8.57171H0V11.4289Z" fill="#E6273E"/>
+</g>
+</g>
+</g>
+</svg>

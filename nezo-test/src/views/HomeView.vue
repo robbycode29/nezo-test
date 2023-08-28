@@ -1,5 +1,5 @@
 <template>
-  <div class="home py-6 px-100px w-full bg-F9F9F9">
+  <div class="home py-6 px-100px w-full bg-F9F9F9 flex flex-col">
     <div class="flex justify-between">
       <div class="w-190px h-58px self-start flex flex-col justify-between gap-3">
         <div class="flex text-12px items-center gap-1">
@@ -31,6 +31,11 @@
       <transition name="slide-fade" mode="out-in">
         <component :is="currentTab" :key="currentTab.name"/>
       </transition>
+    </div>
+    <div class="inline-flex justify-center items-center gap-1">
+      <span class="text-5E6278 text-xs font-normal">Made with</span>
+      <img src="@/assets/body/heart.svg"/>
+      <span class="text-5E6278 text-xs font-normal">by Nezo Digital</span>
     </div>
   </div>
 </template>
