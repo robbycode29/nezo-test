@@ -34,7 +34,9 @@
                 </div>
             </div>
             <pagination-control/>
-            <orders-table/>
+            <div class="overflow-x-scroll pl-36">
+                <orders-table/>
+            </div>
             <pagination-control/>
         </div>
     </div>
@@ -72,3 +74,34 @@ export default defineComponent({
     },
 });
 </script>
+<style scoped>
+/* This is the scrollbar track (the background) */
+::-webkit-scrollbar {
+    width: 4px; 
+    height: 8px; 
+}
+
+/* This is the handle (or the 'thumb') */
+::-webkit-scrollbar-thumb {
+    background: #EBEBEB;
+    border-radius: 8px;
+}
+
+/* This makes the scrollbar slim */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(128, 128, 128, 0.5) transparent; /* Thumb and Track */
+}
+
+/* These are for Internet Explorer */
+body {
+    scrollbar-face-color: grey;
+    scrollbar-track-color: transparent;
+    scrollbar-width: thin;
+    scrollbar-arrow-color: grey;
+    scrollbar-highlight-color: grey;
+    scrollbar-3dlight-color: transparent;
+    scrollbar-darkshadow-color: transparent;
+    scrollbar-shadow-color: transparent;
+}
+</style>

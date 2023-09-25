@@ -19,7 +19,7 @@
         <span class="px-2 text-16px transition duration-500 group-hover:text-white">Download All</span>
       </button>
     </div>
-    <div class="flex pt-6 pb-9 gap-9 justify-between">
+    <div class="flex pt-6 mb-9 gap-9 justify-between overflow-x-scroll pl-1 pb-1">
       <div v-for="chart in getCharts" :key="chart.id">
         <chart-one :chart="chart"/>
       </div>
@@ -133,5 +133,34 @@ export default defineComponent({
 .slide-fade-leave-to {
   transform: translateX(100%);
   opacity: 0;
+}
+/* This is the scrollbar track (the background) */
+::-webkit-scrollbar {
+    width: 4px; 
+    height: 8px; 
+}
+
+/* This is the handle (or the 'thumb') */
+::-webkit-scrollbar-thumb {
+    background: #EBEBEB;
+    border-radius: 8px;
+}
+
+/* This makes the scrollbar slim */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(128, 128, 128, 0.5) transparent; /* Thumb and Track */
+}
+
+/* These are for Internet Explorer */
+body {
+    scrollbar-face-color: grey;
+    scrollbar-track-color: transparent;
+    scrollbar-width: thin;
+    scrollbar-arrow-color: grey;
+    scrollbar-highlight-color: grey;
+    scrollbar-3dlight-color: transparent;
+    scrollbar-darkshadow-color: transparent;
+    scrollbar-shadow-color: transparent;
 }
 </style>
