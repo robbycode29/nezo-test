@@ -35,7 +35,7 @@
     <div class="inline-flex justify-center items-center gap-1">
       <span class="text-5E6278 text-xs font-normal">Made with</span>
       <img src="@/assets/body/heart.svg"/>
-      <span class="text-5E6278 text-xs font-normal">by Nezo Digital</span>
+      <span class="text-5E6278 text-xs font-normal">for Nezo Digital</span>
     </div>
   </div>
 </template>
